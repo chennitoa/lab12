@@ -49,7 +49,9 @@ public class FamilyTree
             // No, recurse. Check all children of this node.
             for (TreeNode child: children)
             {
-                child.getNodeWithName(targetName);
+                if (child.getNodeWithName(targetName) != null) {
+                	return child.getNodeWithName(targetName);
+                }
             }
             
             // Not found anywhere.
